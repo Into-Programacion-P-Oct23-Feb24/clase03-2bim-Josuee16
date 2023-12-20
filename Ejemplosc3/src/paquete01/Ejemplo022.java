@@ -12,7 +12,7 @@ import java.util.Scanner;
  *
  * @author reroes
  */
-public class Ejemplo02 {
+public class Ejemplo022 {
 
     /**
      * @param args the command line arguments
@@ -21,7 +21,7 @@ public class Ejemplo02 {
         // Creación de arreglo bidimensionales
         Scanner entrada = new Scanner(System.in);
         entrada.useLocale(Locale.US);
-        int valor;
+       
         // forma 1
         int[][] arreglo1 = new int[3][4]; //
         System.out.printf("Uso de la opción length: %d\n",
@@ -33,10 +33,15 @@ public class Ejemplo02 {
         arreglo1[0][2] = 1000;
         for (int f = 0; f < arreglo1.length; f++) {
             for (int c = 0; c < arreglo1[f].length; c++) {
+                 int valor;
                 System.out.printf("Ingrese el valor del arreglo en la "
                         + "posicion: [%d] [%d]\n", f, c);
                 valor = entrada.nextInt();
                 arreglo1[f][c] = valor;
+                if ((valor % 2 == 0) && (valor >=10)){
+                    arreglo1[f][c] = 0;
+                    
+                }
             }
 
         }
